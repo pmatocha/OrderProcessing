@@ -54,7 +54,7 @@ The system follows a layered architecture with the following main components:
 
 ## Key Technologies
 
-- **ASP.NET Core 6+** for building the API.
+- **ASP.NET Core 9** for building the API.
 - **FluentValidation** for input validation.
 - **MediatR** for handling commands and queries.
 - **Serilog** for logging.
@@ -90,3 +90,4 @@ The system follows a layered architecture with the following main components:
 ## Future Enhancements
 
 - Add events e.g. update inventory after order creation
+- User Docker
