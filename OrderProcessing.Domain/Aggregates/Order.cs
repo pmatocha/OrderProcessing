@@ -29,6 +29,7 @@ public class Order : AggregateRoot
 
     public void AddItem(OrderItem item)
     {
+        ArgumentNullException.ThrowIfNull(item);
         Items.Add(item);
     }
 }
