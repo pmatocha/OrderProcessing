@@ -2,11 +2,12 @@
 using OrderProcessing.Application.Repositories;
 using OrderProcessing.Common.Helpers;
 using OrderProcessing.Domain.Aggregates;
+using OrderProcessing.Domain.Events;
 using OrderProcessing.Domain.ValueObjects;
 
 namespace OrderProcessing.Application.Commands.CreateOrder;
 
-public class CreateOrderHandler(IOrderRepository orderRepository) : IRequestHandler<CreateOrderCommand, Guid>
+public class CreateOrderHandler(IOrderRepository orderRepository, IMediator mediator) : IRequestHandler<CreateOrderCommand, Guid>
 {
     public async Task<Guid> Handle(CreateOrderCommand request, CancellationToken cancellationToken)
     {
@@ -21,6 +22,11 @@ public class CreateOrderHandler(IOrderRepository orderRepository) : IRequestHand
         }
 
         await orderRepository.SaveAsync(order, cancellationToken);
+        
+        // Publish domain event
+        var orderCreatedEvent = new OrderCreatedEvent(order.Id, order.Items);
+        await mediator.Publish(orderCreatedEvent, cancellationToken);
+        
         return order.Id;
     }
 }

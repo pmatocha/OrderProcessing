@@ -1,4 +1,5 @@
-﻿using Moq;
+﻿using MediatR;
+using Moq;
 using OrderProcessing.Application.Commands.CreateOrder;
 using OrderProcessing.Application.DTOs;
 using OrderProcessing.Application.Repositories;
@@ -9,12 +10,15 @@ namespace OrderProcessing.Application.Tests.CreateOrder;
 public class CreateOrderHandlerTests
 {
     private readonly Mock<IOrderRepository> _orderRepositoryMock;
+    private readonly Mock<IMediator> _mediatorMock;
     private readonly CreateOrderHandler _handler;
+    
 
     public CreateOrderHandlerTests()
     {
         _orderRepositoryMock = new Mock<IOrderRepository>();
-        _handler = new CreateOrderHandler(_orderRepositoryMock.Object);
+        _mediatorMock = new Mock<IMediator>();
+        _handler = new CreateOrderHandler(_orderRepositoryMock.Object, _mediatorMock.Object);
     }
 
     [Fact]
