@@ -91,3 +91,5 @@ The system follows a layered architecture with the following main components:
 
 - Add events e.g. update inventory after order creation
 - User Docker
+- Use mapper 
+- Add other order functionality (delete, update)
