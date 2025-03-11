@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderProcessing.API", "OrderProcessing.API\OrderProcessing.API.csproj", "{304266A9-2E36-477D-B34D-08F96711A92E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F111BC5F-A767-4E46-B595-443B7DCDB2A7}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F2485C7F-91CC-4F44-B557-82F0C2631661}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderProcessing.Application", "OrderProcessing.Application\OrderProcessing.Application.csproj", "{14167398-E883-494A-A317-06B192567484}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderProcessing.Domain", "OrderProcessing.Domain\OrderProcessing.Domain.csproj", "{918102D7-05E5-432B-B796-EDA350D141E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderProcessing.Infrastructure", "OrderProcessing.Infrastructure\OrderProcessing.Infrastructure.csproj", "{D70AAE2A-8801-4F1C-9EA4-D586D463B5B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderProcessing.Tests", "OrderProcessing.Tests\OrderProcessing.Tests.csproj", "{6F151532-3A6C-4706-9F70-348BD0DAD606}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderProcessing.Common", "OrderProcessing.Common\OrderProcessing.Common.csproj", "{154299BF-E8B8-46D9-B934-C0814B87ECE2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{304266A9-2E36-477D-B34D-08F96711A92E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{304266A9-2E36-477D-B34D-08F96711A92E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{304266A9-2E36-477D-B34D-08F96711A92E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{304266A9-2E36-477D-B34D-08F96711A92E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14167398-E883-494A-A317-06B192567484}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14167398-E883-494A-A317-06B192567484}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14167398-E883-494A-A317-06B192567484}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14167398-E883-494A-A317-06B192567484}.Release|Any CPU.Build.0 = Release|Any CPU
+		{918102D7-05E5-432B-B796-EDA350D141E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{918102D7-05E5-432B-B796-EDA350D141E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{918102D7-05E5-432B-B796-EDA350D141E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{918102D7-05E5-432B-B796-EDA350D141E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D70AAE2A-8801-4F1C-9EA4-D586D463B5B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D70AAE2A-8801-4F1C-9EA4-D586D463B5B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D70AAE2A-8801-4F1C-9EA4-D586D463B5B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D70AAE2A-8801-4F1C-9EA4-D586D463B5B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6F151532-3A6C-4706-9F70-348BD0DAD606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F151532-3A6C-4706-9F70-348BD0DAD606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F151532-3A6C-4706-9F70-348BD0DAD606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F151532-3A6C-4706-9F70-348BD0DAD606}.Release|Any CPU.Build.0 = Release|Any CPU
+		{154299BF-E8B8-46D9-B934-C0814B87ECE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{154299BF-E8B8-46D9-B934-C0814B87ECE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{154299BF-E8B8-46D9-B934-C0814B87ECE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{154299BF-E8B8-46D9-B934-C0814B87ECE2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{304266A9-2E36-477D-B34D-08F96711A92E} = {F2485C7F-91CC-4F44-B557-82F0C2631661}
+		{14167398-E883-494A-A317-06B192567484} = {F2485C7F-91CC-4F44-B557-82F0C2631661}
+		{918102D7-05E5-432B-B796-EDA350D141E0} = {F2485C7F-91CC-4F44-B557-82F0C2631661}
+		{D70AAE2A-8801-4F1C-9EA4-D586D463B5B8} = {F2485C7F-91CC-4F44-B557-82F0C2631661}
+		{6F151532-3A6C-4706-9F70-348BD0DAD606} = {F2485C7F-91CC-4F44-B557-82F0C2631661}
+		{154299BF-E8B8-46D9-B934-C0814B87ECE2} = {F2485C7F-91CC-4F44-B557-82F0C2631661}
+	EndGlobalSection
+EndGlobal
