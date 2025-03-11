@@ -19,7 +19,8 @@ public class OrderRepository(OrderProcessingDbContext dbContext) : IOrderReposit
             orderEntity.Id,
             orderEntity.InvoiceAddress,
             orderEntity.InvoiceEmail,
-            orderEntity.InvoiceCreditCardNumber
+            orderEntity.InvoiceCreditCardNumber,
+            orderEntity.CreatedDate.DateTime
         );
 
         foreach (var orderItemEntity in orderEntity.OrderItems.Select(x =>

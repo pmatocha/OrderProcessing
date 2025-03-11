@@ -31,7 +31,7 @@ public class OrderRepositoryTests
         {
             // Arrange
             var orderId = Guid.NewGuid();
-            var order = new Order(orderId, "123 Street", "test@example.com", "encrypted-credit-card");
+            var order = new Order(orderId, "123 Street", "test@example.com", "encrypted-credit-card", DateTime.Now);
             order.AddItem(new OrderItem(Guid.NewGuid(), "Product A", 2, 19.99m));
 
             // Save the order to the in-memory database
@@ -66,7 +66,7 @@ public class OrderRepositoryTests
         {
             // Arrange
             var orderId = Guid.NewGuid();
-            var order = new Order(orderId, "123 Street", "test@example.com", "encrypted-credit-card");
+            var order = new Order(orderId, "123 Street", "test@example.com", "encrypted-credit-card", DateTime.Now);
             order.AddItem(new OrderItem(Guid.NewGuid(), "Product A", 2, 19.99m));
 
             // Act

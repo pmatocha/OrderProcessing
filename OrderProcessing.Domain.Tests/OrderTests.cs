@@ -20,7 +20,7 @@ public class OrderTests
     public void Order_CreatesWithValidParametersAndId()
     {
         var id = Guid.NewGuid();
-        var order = new Order(id, "123 Main St", "test@example.com", "4111111111111111");
+        var order = new Order(id, "123 Main St", "test@example.com", "4111111111111111", DateTime.Now);
 
         Assert.Equal(id, order.Id);
         Assert.Equal("123 Main St", order.InvoiceAddress);

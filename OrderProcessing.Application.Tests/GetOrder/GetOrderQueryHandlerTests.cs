@@ -24,7 +24,7 @@ public class GetOrderQueryHandlerTests
     {
         // Arrange
         var orderId = Guid.NewGuid();
-        var order = new Order(orderId, "Invoice Address", "invoice@example.com", EncryptionHelper.Encrypt("4111111111111111"));
+        var order = new Order(orderId, "Invoice Address", "invoice@example.com", EncryptionHelper.Encrypt("4111111111111111"), DateTime.Now);
  
         order.AddItem(new OrderItem(Guid.NewGuid(), "Product 1", 2, 100));
         order.AddItem(new OrderItem(Guid.NewGuid(), "Product 2", 1, 50));
@@ -41,7 +41,7 @@ public class GetOrderQueryHandlerTests
 
         // Assert
         result.Should().NotBeNull();
-        result?.OrderId.Should().Be(orderId);
+        result?.OrderNumber.Should().Be(orderId);
         result?.InvoiceAddress.Should().Be(order.InvoiceAddress);
         result?.InvoiceEmailAddress.Should().Be(order.InvoiceAddress);
         result?.OrderItems.Count.Should().Be(2);

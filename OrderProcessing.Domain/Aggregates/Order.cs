@@ -8,6 +8,7 @@ public class Order : AggregateRoot
     public string InvoiceAddress { get; private set; }
     public string InvoiceEmail { get; private set; }
     public string InvoiceCreditCardNumber { get; private set; }
+    public DateTime CreatedDate { get; private set; }
     public List<OrderItem> Items { get; private set; }
 
     public Order(string invoiceAddress, string invoiceEmail, string invoiceCreditCardNumber)
@@ -18,7 +19,7 @@ public class Order : AggregateRoot
         Items = new List<OrderItem>();
     }
     
-    public Order(Guid id, string invoiceAddress, string invoiceEmail, string invoiceCreditCardNumber)
+    public Order(Guid id, string invoiceAddress, string invoiceEmail, string invoiceCreditCardNumber, DateTime createdDate)
     {
         Id = id;
         InvoiceAddress = invoiceAddress;

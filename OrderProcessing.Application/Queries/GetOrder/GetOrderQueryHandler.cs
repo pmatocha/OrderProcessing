@@ -18,13 +18,14 @@ public class GetOrderQueryHandler(IOrderRepository orderRepository) : IRequestHa
         
         return new OrderDto
         {
-            OrderId = order.Id,
+            OrderNumber = order.Id,
             InvoiceAddress = order.InvoiceAddress,
             InvoiceEmailAddress = order.InvoiceAddress,
             InvoiceCreditCardNumber = EncryptionHelper.Decrypt(order.InvoiceCreditCardNumber),
             OrderItems = order.Items.Select(orderItem =>
                     new OrderItemDto(orderItem.ProductId, orderItem.ProductName, orderItem.Quantity, orderItem.Price))
-                .ToList()
+                .ToList(),
+            CreatedAt = order.CreatedDate
         };
     }
 }
