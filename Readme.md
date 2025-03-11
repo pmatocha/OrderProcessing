@@ -27,10 +27,6 @@ The system follows a layered architecture with the following main components:
 ### 4. **Infrastructure Layer**
 
 - The **Infrastructure** layer provides implementations for the repository interfaces defined in the application layer and database interaction using **Entity Framework Core** with **SQL Server**.
-  
-### 5. **Persistence Layer**
-
-- **Entity Framework Core** (EF Core) is used for the persistence of domain objects, providing a repository pattern for interacting with the underlying database.
 
 ### 6. **Test Layer**
 
