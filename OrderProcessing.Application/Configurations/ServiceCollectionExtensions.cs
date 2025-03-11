@@ -2,6 +2,7 @@
 using FluentValidation;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
+using OrderProcessing.Application.Behaviours;
 using OrderProcessing.Application.Commands.CreateOrder;
 using OrderProcessing.Application.Events;
 using OrderProcessing.Application.Validation;
@@ -18,6 +19,7 @@ namespace OrderProcessing.Application.Configurations
             {
                 configuration.RegisterServicesFromAssembly(typeof(ServiceCollectionExtensions).Assembly);
                 configuration.AddOpenRequestPreProcessor(typeof(ValidationProcessor<>));
+                configuration.AddOpenBehavior(typeof(LoggingPipelineBehaviour<,>));
             });
             
             // Add FluentValidation service
